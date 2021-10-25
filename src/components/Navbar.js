@@ -23,7 +23,7 @@ import {
 import avatar from "../avatar.png";
 import { makeStyles } from "@material-ui/core/styles";
 import MobilRightMenuSlider from "@material-ui/core/Drawer";
-
+import Footer from "./Footer";
 const cssStyles = makeStyles((theme) => ({
   menuSliderContainer: {
     width: 250,
@@ -54,10 +54,12 @@ const menuItems = [
   {
     listIcon: <Apps />,
     listText: "Portfolio",
+    listPath: "/portfolio",
   },
   {
     listIcon: <ContactMail />,
-    listText: "Contacts",
+    listText: "Contact Me",
+    listPath: "/contact",
   },
 ];
 
@@ -107,6 +109,7 @@ const Navbar = () => {
               onClose={togglerSlider("right", false)}
             >
               {sideList("right")}
+              <Footer />
             </MobilRightMenuSlider>
           </Toolbar>
         </AppBar>
