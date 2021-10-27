@@ -24,6 +24,7 @@ import avatar from "../avatar.png";
 import { makeStyles } from "@material-ui/core/styles";
 import MobilRightMenuSlider from "@material-ui/core/Drawer";
 import Footer from "./Footer";
+import { calcEasing } from "tsparticles";
 const cssStyles = makeStyles((theme) => ({
   menuSliderContainer: {
     width: 250,
@@ -38,6 +39,18 @@ const cssStyles = makeStyles((theme) => ({
   },
   ListItem: {
     color: "tan",
+  },
+  logo: {
+    padding: "0.5rem",
+    fontWeight: "bolder",
+    borderRadius: "0.3rem",
+    border: "1px solid #fff",
+  },
+  arrow: {
+    color: "#fff",
+  },
+  appbar: {
+    background: "#23b5d3",
   },
 }));
 const menuItems = [
@@ -97,12 +110,17 @@ const Navbar = () => {
   return (
     <>
       <Box component="nav">
-        <AppBar position="static">
+        <AppBar position="static" className={classes.appbar}>
           <Toolbar>
-            <IconButton onClick={togglerSlider("right", true)}>
+            <IconButton
+              className={classes.arrow}
+              onClick={togglerSlider("right", true)}
+            >
               <ArrowBack />
             </IconButton>
-            <Typography variant="h5">Portfolio</Typography>
+            <Typography variant="h5" className={classes.logo}>
+              AT
+            </Typography>
             <MobilRightMenuSlider
               open={state.right}
               anchor="right"

@@ -13,7 +13,9 @@ const cssStyles = makeStyles((theme) => ({
     margin: theme.spacing(1),
   },
   title: {
-    color: "tomato",
+    color: "#ff6978",
+    fontFamily: "Nunito",
+    fontWeight: "bolder",
   },
   total: {
     position: "absolute",
@@ -25,6 +27,13 @@ const cssStyles = makeStyles((theme) => ({
     zIndex: 1,
   },
   sub: {
+    color: "#fff",
+    fontFamily: "Nunito",
+    fontSize: "1.3rem",
+    textDecoration: "underline",
+    textDecorationColor: "#FF6978",
+  },
+  titletop: {
     color: "#fff",
   },
 }));
@@ -65,11 +74,14 @@ const Header = () => {
         <Grid container justifyContent="center">
           <Avatar className={classes.avatar} src={avatar} alt="akhila" />
         </Grid>
+        <Typography className={classes.titletop} variant="h6">
+          Hello! I'm
+        </Typography>
         <Typography className={classes.title} variant="h4">
           <span ref={el}></span>
         </Typography>
         <Typography className={classes.sub}>
-          <span ref={el2}></span>
+          I'm a <span ref={el2}></span>
         </Typography>
       </Box>
     </>
