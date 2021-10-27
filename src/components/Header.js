@@ -13,7 +13,7 @@ const cssStyles = makeStyles((theme) => ({
     margin: theme.spacing(1),
   },
   title: {
-    color: "#ff6978",
+    color: "#f2c351",
     fontFamily: "Nunito",
     fontWeight: "bolder",
   },

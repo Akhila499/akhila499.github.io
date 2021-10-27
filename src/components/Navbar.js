@@ -24,11 +24,11 @@ import avatar from "../avatar.png";
 import { makeStyles } from "@material-ui/core/styles";
 import MobilRightMenuSlider from "@material-ui/core/Drawer";
 import Footer from "./Footer";
-import { calcEasing } from "tsparticles";
+import { calcEasing, rgbaToHsva } from "tsparticles";
 const cssStyles = makeStyles((theme) => ({
   menuSliderContainer: {
     width: 250,
-    background: "#511",
+    background: "#f2c351",
     height: "100vh",
   },
   avatar: {
@@ -38,8 +38,32 @@ const cssStyles = makeStyles((theme) => ({
     height: theme.spacing(13),
   },
   ListItem: {
-    color: "tan",
+    color: "#fff",
+    fontFamily: "Nunito",
+    fontSize: "1.3rem",
+    "& span": {
+      fontSize: "1rem",
+      fontWeight: "600",
+    },
   },
+  ul: {
+    "& a:hover": {
+      backgroundColor: "#454040",
+      "& ListItemIcon": {
+        color: "#fff",
+      },
+    },
+  },
+  ListItemIcon: {
+    color: "#fff",
+    "& svg": {
+      // border: "1px solid #000",
+    },
+  },
+  "ListItem:hover": {
+    backgroundColor: "#d59e1b",
+  },
+
   logo: {
     padding: "0.5rem",
     fontWeight: "bolder",
@@ -50,7 +74,7 @@ const cssStyles = makeStyles((theme) => ({
     color: "#fff",
   },
   appbar: {
-    background: "#23b5d3",
+    background: "#f2c351",
   },
 }));
 const menuItems = [
@@ -91,11 +115,12 @@ const Navbar = () => {
       onClick={togglerSlider(slider, false)}
     >
       <Avatar className={classes.avatar} src={avatar} alt="Akhila" />
+      <Footer />
       <Divider />
-      <List>
+      <List className={classes.ul}>
         {menuItems.map((lsItem, key) => (
           <ListItem button key={key} component={Link} to={lsItem.listPath}>
-            <ListItemIcon className={classes.ListItem}>
+            <ListItemIcon className={classes.ListItemIcon}>
               {lsItem.listIcon}
             </ListItemIcon>
             <ListItemText
@@ -127,7 +152,6 @@ const Navbar = () => {
               onClose={togglerSlider("right", false)}
             >
               {sideList("right")}
-              <Footer />
             </MobilRightMenuSlider>
           </Toolbar>
         </AppBar>

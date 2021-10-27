@@ -2,10 +2,31 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography, Box } from "@material-ui/core";
 import Navbar from "./Navbar";
+import Image1 from "../images/resumeimage.jpg";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
-    background: "tomato",
+    backgroundImage: `url(${Image1})`,
+    backgroundSize: "cover",
+    fontFamily: "'Nunito' !important",
+    // opacity: "0.5",
+  },
+  resp: {
+    fontFamily: "Nunito",
+  },
+  resp1: {
+    fontFamily: "Nunito",
+    fontWeight: "700",
+    color: "#686565",
+    textTransform: "Capitalize",
+  },
+  resumehead: {
+    marginBottom: "2rem",
+    paddingTop: "1rem",
+    fontFamily: "Nunito",
+    color: "#fff",
+    fontWeight: "bold",
+    fontFamily: "'Nunito' !important",
   },
   timeLine: {
     position: "relative",
@@ -15,9 +36,9 @@ const useStyles = makeStyles((theme) => ({
       content: "''",
       position: "absolute",
       height: "100%",
-      border: "1px solid tan",
+      border: "1px solid #f54a5c",
       right: "4px",
-      top: 0,
+      top: "5rem",
     },
     "&:after": {
       content: "''",
@@ -25,7 +46,8 @@ const useStyles = makeStyles((theme) => ({
       clear: "both",
     },
     [theme.breakpoints.up("md")]: {
-      padding: "2rem",
+      padding: "0 2rem",
+      background: "#000000a6",
       "&:before": {
         left: "calc(50% - 1px)",
         right: "auto",
@@ -33,14 +55,18 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   timeLineItem: {
-    padding: "1rem",
-    borderBottom: "2px solid tan",
+    padding: "1.5rem",
+    borderBottom: "5px solid #f54a5c",
     position: "relative",
+    background: "#fff",
     margin: "1rem 3rem 1rem 1rem",
     clear: "both",
     "&:after": {
       content: "''",
       position: "absolute",
+    },
+    p: {
+      fontFamily: "Nunito",
     },
     "&:before": {
       content: "''",
@@ -48,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
       right: "-0.625rem",
       top: "calc(50% - 5px)",
       borderStyle: "solid",
-      borderColor: "green green transparent transparent",
+      borderColor: "#f64a5d #f64a5d transparent transparent",
       borderWidth: "0.625rem",
       transform: "rotate(45deg)",
     },
@@ -58,24 +84,28 @@ const useStyles = makeStyles((theme) => ({
       "&:nth-of-type(2n)": {
         float: "right",
         margin: "1rem",
-        borderColor: "tan",
+        borderColor: "#fff",
+        borderBottom: "5px solid #f54a5c",
       },
       "&:nth-of-type(2n):before": {
         right: "auto",
-        left: "-1rem",
-        borderColor: "transparent transparent red red",
+        left: "-0.6rem",
+        borderColor: "transparent transparent #f54a5c #f54a5c",
       },
     },
   },
   timeLineYear: {
     textAlign: "center",
-    maxWidth: "9.3rem",
+    maxWidth: "7.3rem",
     margin: "0 3rem 0 auto",
-    fontSize: "1.8rem",
-    background: "red",
+    fontSize: "1.3rem",
+    background: "#f64a5d",
     color: "white",
+    fontWeight: "700",
     lineHeight: 1,
-    padding: "0.5rem 0 1rem",
+    fontFamily: "Nunito",
+    borderBottom: "2px solid white",
+    padding: "0.5rem 0 0.5rem",
     "&:before": {
       display: "none",
     },
@@ -85,6 +115,7 @@ const useStyles = makeStyles((theme) => ({
       "&:nth-of-type(2n)": {
         float: "none",
         margin: "0 auto",
+        borderBottom: "2px solid #fff",
       },
       "&:nth-of-type(2n):before": {
         display: "none",
@@ -97,9 +128,12 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "uppercase",
   },
   subHeading: {
-    color: "white",
+    color: "#f54a5c",
     padding: "0",
     textTransform: "uppercase",
+    fontSize: "1.1rem",
+    fontFamily: "Nunito",
+    fontWeight: "700",
   },
 }));
 
@@ -107,108 +141,118 @@ const Resume = () => {
   const classes = useStyles();
   return (
     <>
-      <Navbar />
-      <Box component="header" className={classes.mainContainer}>
-        <Typography variant="h4" align="center">
-          Working Experience
-        </Typography>
-        <Box component="div" className={classes.timeLine}>
-          <Typography
-            variant="h2"
-            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-          >
-            2013
-          </Typography>
-          <Box component="div" className={classes.timeLineItem}>
+      <div className="resumetotal">
+        <Navbar />
+        <Box component="header" className={classes.mainContainer}>
+          <Box component="div" className={classes.timeLine}>
             <Typography
-              variant="h5"
+              variant="h4"
               align="center"
-              className={classes.subHeading}
+              className={classes.resumehead}
             >
-              web design
+              Working Experience
             </Typography>
-            <Typography variant="body1" align="center">
-              company name where worked
+            <Typography
+              variant="h2"
+              className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+            >
+              2016
             </Typography>
-            <Typography varient="subtile1" align="center">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s
-            </Typography>
-          </Box>
+            <Box component="div" className={classes.timeLineItem}>
+              <Typography
+                variant="h5"
+                align="center"
+                className={classes.subHeading}
+              >
+                Junior Front End Developer
+              </Typography>
+              <Typography
+                variant="body1"
+                align="center"
+                className={classes.resp1}
+              >
+                Way IT Solutions
+              </Typography>
+              <Typography
+                varient="subtile1"
+                align="center"
+                className={classes.resp}
+              >
+                Designed template for websites and social media marketing
+                campaigns using Adobe Photoshop.Developed responsive webpages
+                using WordPress.Used HTML, CSS and JavaScript in creating
+                responsive front end web applications
+              </Typography>
+            </Box>
 
-          <Typography
-            variant="h2"
-            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-          >
-            2014
-          </Typography>
-          <Box component="div" className={classes.timeLineItem}>
             <Typography
-              variant="h5"
-              align="center"
-              className={classes.subHeading}
+              variant="h2"
+              className={`${classes.timeLineYear} ${classes.timeLineItem}`}
             >
-              web design
+              2020
             </Typography>
-            <Typography variant="body1" align="center">
-              company name where worked
-            </Typography>
-            <Typography varient="subtile1" align="center">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s
-            </Typography>
-          </Box>
-          <Typography
-            variant="h2"
-            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-          >
-            2015
-          </Typography>
-          <Box component="div" className={classes.timeLineItem}>
+            <Box component="div" className={classes.timeLineItem}>
+              <Typography
+                variant="h5"
+                align="center"
+                className={classes.subHeading}
+              >
+                Technology Associate
+              </Typography>
+              <Typography
+                variant="body1"
+                align="center"
+                className={classes.resp1}
+              >
+                Indian School of Business
+              </Typography>
+              <Typography
+                varient="subtile1"
+                align="center"
+                className={classes.resp}
+              >
+                Analyzed data with a demonstrated competence in Microsoft Excel,
+                creating graphs, charts and handling data tables. Python
+                scripting for data wrangling.
+              </Typography>
+            </Box>
             <Typography
-              variant="h5"
-              align="center"
-              className={classes.subHeading}
+              variant="h2"
+              className={`${classes.timeLineYear} ${classes.timeLineItem}`}
             >
-              web design
+              2021
             </Typography>
-            <Typography variant="body1" align="center">
-              company name where worked
-            </Typography>
-            <Typography varient="subtile1" align="center">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s
-            </Typography>
-          </Box>
-          <Typography
-            variant="h2"
-            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-          >
-            2016
-          </Typography>
-          <Box component="div" className={classes.timeLineItem}>
-            <Typography
-              variant="h5"
-              align="center"
-              className={classes.subHeading}
-            >
-              web design
-            </Typography>
-            <Typography variant="body1" align="center">
-              company name where worked
-            </Typography>
-            <Typography varient="subtile1" align="center">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s
-            </Typography>
+            <Box component="div" className={classes.timeLineItem}>
+              <Typography
+                variant="h5"
+                align="center"
+                className={classes.subHeading}
+              >
+                Intern
+              </Typography>
+              <Typography
+                variant="body1"
+                align="center"
+                className={classes.resp1}
+              >
+                Global Technology Corporation
+              </Typography>
+              <Typography
+                varient="subtile1"
+                align="center"
+                className={classes.resp}
+              >
+                Developed a log analysis solution which extracts error messages
+                from a log file.Assisted the head of human resources in handling
+                ad-hoc tasks related to employee hiring and onboarding
+                activities.Created User Stories on JIRA and assigned them to
+                respective developers.
+              </Typography>
+            </Box>
           </Box>
         </Box>
-      </Box>
-      Hello from Resume component
+        Hello from Resume component
+      </div>
     </>
   );
 };

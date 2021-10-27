@@ -15,9 +15,9 @@ const useStyle = makeStyles({
       maxWidth: 250,
     },
     "& .MuiSvgIcon-root": {
-      fill: "tan",
+      fill: "#3d3636de",
       "&:hover": {
-        fill: "tomato",
+        fill: "#009bb5",
         fontSize: "1.8rem",
       },
     },
@@ -27,7 +27,7 @@ const Footer = () => {
   const classes = useStyle();
   return (
     <div>
-      <BottomNavigation width="auto" style={{ background: "#232" }}>
+      <BottomNavigation width="auto" style={{ background: "#f2c351" }}>
         <BottomNavigationAction
           className={classes.root}
           style={{ padding: "0" }}

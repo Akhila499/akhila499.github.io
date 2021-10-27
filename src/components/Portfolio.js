@@ -16,11 +16,13 @@ import project1 from "../images/bg.jpg";
 import project2 from "../images/bg.jpg";
 import project3 from "../images/bg.jpg";
 import project4 from "../images/bg.jpg";
+import leaves from "../images/leaves.png";
 
 const useStyles = makeStyles({
   portfolio_main: {
     background: "#234",
     height: "100%",
+    backgroundImage: `url(${leaves})`,
   },
   port_card: {
     maxWidth: 345,
