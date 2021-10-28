@@ -3,7 +3,7 @@ import { makeStyles, withStyles } from "@material-ui/core";
 import { TextField, Typography, Button, Grid, Box } from "@material-ui/core";
 import SendIcon from "@material-ui/icons/Send";
 import Navbar from "./Navbar";
-import image1 from "../images/trees.png";
+import image1 from "../images/noisy.png";
 import leaves from "../images/leaves.png";
 const useStyles = makeStyles((theme) => ({
   form: {

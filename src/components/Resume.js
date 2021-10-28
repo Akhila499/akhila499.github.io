@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography, Box } from "@material-ui/core";
 import Navbar from "./Navbar";
-import Image1 from "../images/resumeimage.jpg";
+import Image1 from "../images/lightgrey.png";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "2rem",
     paddingTop: "1rem",
     fontFamily: "Nunito",
-    color: "#fff",
+    color: "#f54a5c",
     fontWeight: "bold",
     fontFamily: "'Nunito' !important",
   },
@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     "&:before": {
       content: "''",
       position: "absolute",
-      height: "100%",
+      height: "90%",
       border: "1px solid #f54a5c",
       right: "4px",
       top: "5rem",
@@ -251,7 +251,6 @@ const Resume = () => {
             </Box>
           </Box>
         </Box>
-        Hello from Resume component
       </div>
     </>
   );
