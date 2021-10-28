@@ -3,41 +3,67 @@ import { makeStyles, withStyles } from "@material-ui/core";
 import { TextField, Typography, Button, Grid, Box } from "@material-ui/core";
 import SendIcon from "@material-ui/icons/Send";
 import Navbar from "./Navbar";
-
+import image1 from "../images/trees.png";
+import leaves from "../images/leaves.png";
 const useStyles = makeStyles((theme) => ({
   form: {
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
     position: "absolute",
+    backgroundImage: `url(${image1})`,
+    padding: "2rem 3rem",
+    borderRadius: ".5rem",
+    "& h5": {
+      color: "#166ba8",
+      fontFamily: "Nunito",
+      textTransform: "Capitalize",
+      fontWeight: "bold",
+      marginBottom: "1rem",
+    },
+    "& input": {
+      background: "#fff",
+      "& fieldset": {
+        borderColor: "#000",
+      },
+    },
+    "& button": {
+      background: "#166ba8",
+    },
   },
   sendbutn: {
     marginTop: "1rem",
-    color: "tomato",
-    borderColor: "tomato",
+    color: "#fff",
+    borderColor: "#166ba8",
   },
+  conto: {},
 }));
 const InputField = withStyles({
   root: {
     "& label.Mui-focused": {
-      color: "red",
+      color: "#166ba8",
     },
     "& label": {
-      color: "tan",
+      color: "#cacaca",
+      fontFamily: "Nunito",
     },
     "& .MuiOutlinedInput-root": {
       "& fieldset": {
-        borderColor: "tan",
+        borderColor: "#e0e0e0",
       },
     },
     "& .MuiOutlinedInput-root:hover": {
       "& fieldset": {
-        borderColor: "tan",
+        borderColor: "#166ba8",
       },
     },
-
+    "& .MuiOutlinedInput-root:focus-visible": {
+      "& fieldset": {
+        outline: "none",
+      },
+    },
     "&.Mui-focused fieldset": {
-      borderColor: "tan",
+      borderColor: "#000",
     },
   },
 })(TextField);
@@ -46,18 +72,9 @@ const ContactMe = () => {
   return (
     <Box component="div">
       <Navbar />
-      <Grid container justifyContent="center">
+      <Grid container justifyContent="center" className={classes.conto}>
         <Box component="form" className={classes.form}>
-          <Typography
-            variant="h5"
-            style={{
-              color: "tomato",
-              textTransform: "uppercase",
-              textAlign: "center",
-            }}
-          >
-            hire or contact me...
-          </Typography>
+          <Typography variant="h5">hire me / contact me...</Typography>
 
           <InputField
             fullWidth={true}

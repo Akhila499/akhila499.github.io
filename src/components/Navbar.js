@@ -68,10 +68,20 @@ const cssStyles = makeStyles((theme) => ({
     padding: "0.5rem",
     fontWeight: "bolder",
     borderRadius: "0.3rem",
-    border: "1px solid #fff",
+    background: "#000",
+    color: "#f2c351",
+    fontFamily: "Nunito",
+    fontSize: "1.8rem",
+    // border: "1px solid #fff",
   },
   arrow: {
-    color: "#fff",
+    color: "#000",
+    "& span": {
+      "& svg": {
+        border: "1px solid #000",
+        borderRadius: "100%",
+      },
+    },
   },
   appbar: {
     background: "#f2c351",

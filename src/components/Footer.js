@@ -17,7 +17,7 @@ const useStyle = makeStyles({
     "& .MuiSvgIcon-root": {
       fill: "#3d3636de",
       "&:hover": {
-        fill: "#009bb5",
+        fill: "#000000",
         fontSize: "1.8rem",
       },
     },
@@ -32,16 +32,22 @@ const Footer = () => {
           className={classes.root}
           style={{ padding: "0" }}
           icon={<LinkedInIcon />}
+          variant="link"
+          href="https://www.linkedin.com/in/akhilathota499"
         />
         <BottomNavigationAction
           className={classes.root}
           style={{ padding: "0" }}
           icon={<GitHubIcon />}
+          variant="link"
+          href="https://github.com/akhila499"
         />
         <BottomNavigationAction
           className={classes.root}
           style={{ padding: "0" }}
           icon={<MailIcon />}
+          variant="link"
+          href="mailto:myemailaddress@gmail.com"
         />
       </BottomNavigation>
     </div>
