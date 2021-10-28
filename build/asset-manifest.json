@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/Akhila499/akhila499.github.io/static/css/main.cbbca49c.chunk.css",
+    "main.js": "/Akhila499/akhila499.github.io/static/js/main.c1d853b7.chunk.js",
+    "main.js.map": "/Akhila499/akhila499.github.io/static/js/main.c1d853b7.chunk.js.map",
+    "runtime-main.js": "/Akhila499/akhila499.github.io/static/js/runtime-main.8d222a7b.js",
+    "runtime-main.js.map": "/Akhila499/akhila499.github.io/static/js/runtime-main.8d222a7b.js.map",
+    "static/js/2.f2b4534b.chunk.js": "/Akhila499/akhila499.github.io/static/js/2.f2b4534b.chunk.js",
+    "static/js/2.f2b4534b.chunk.js.map": "/Akhila499/akhila499.github.io/static/js/2.f2b4534b.chunk.js.map",
+    "static/js/3.cf7f6f18.chunk.js": "/Akhila499/akhila499.github.io/static/js/3.cf7f6f18.chunk.js",
+    "static/js/3.cf7f6f18.chunk.js.map": "/Akhila499/akhila499.github.io/static/js/3.cf7f6f18.chunk.js.map",
+    "index.html": "/Akhila499/akhila499.github.io/index.html",
+    "static/css/main.cbbca49c.chunk.css.map": "/Akhila499/akhila499.github.io/static/css/main.cbbca49c.chunk.css.map",
+    "static/js/2.f2b4534b.chunk.js.LICENSE.txt": "/Akhila499/akhila499.github.io/static/js/2.f2b4534b.chunk.js.LICENSE.txt",
+    "static/media/avatar.24897801.png": "/Akhila499/akhila499.github.io/static/media/avatar.24897801.png",
+    "static/media/bg.eca92485.jpg": "/Akhila499/akhila499.github.io/static/media/bg.eca92485.jpg",
+    "static/media/App.css": "/Akhila499/akhila499.github.io/static/media/bg1.dc1ef5fc.jpeg",
+    "static/media/leaves.e4a54e5e.png": "/Akhila499/akhila499.github.io/static/media/leaves.e4a54e5e.png",
+    "static/media/lightgrey.d4301cc1.png": "/Akhila499/akhila499.github.io/static/media/lightgrey.d4301cc1.png",
+    "static/media/noisy.80da02c6.png": "/Akhila499/akhila499.github.io/static/media/noisy.80da02c6.png",
+    "static/media/project3.68a6d6f5.png": "/Akhila499/akhila499.github.io/static/media/project3.68a6d6f5.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8d222a7b.js",
+    "static/js/2.f2b4534b.chunk.js",
+    "static/css/main.cbbca49c.chunk.css",
+    "static/js/main.c1d853b7.chunk.js"
+  ]
+}
