@@ -28,8 +28,8 @@ const useStyles = makeStyles({
     position: "relative",
   },
   port_card: {
-    maxWidth: 345,
-    margin: "3rem",
+    maxWidth: "31vw",
+    margin: "3rem 8rem",
     padding: "0.5rem",
     border: "1px solid #e6e6e6",
     background: "#f1f6e5",

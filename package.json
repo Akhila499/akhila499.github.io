@@ -2,6 +2,7 @@
   "name": "akhila499.github.io",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://github.com/Akhila499/akhila499.github.io",
   "dependencies": {
     "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",
@@ -9,6 +10,7 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "gh-pages": "^3.2.3",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-particles-js": "^3.5.3",
@@ -18,6 +20,8 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
